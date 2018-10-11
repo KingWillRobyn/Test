@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $('#completed').droppable({
     append: ".taskItem",
-    revert: "invalid",
     tolerance: "fit",
+    revert:"invalid",
     drop: function(event, ui) {
       var $item = ui.draggable;
       $item.fadeOut(function() {
@@ -16,12 +16,9 @@ $(document).ready(function() {
         }).fadeIn();
       });
       $item.appendTo(this);
-      alert("dropped");
-    }
+      ui.draggable.draggable({disabled: true});
+    },
   });
-
-
-
 
 });
 var count = 1;
@@ -33,14 +30,12 @@ $(document).on("click", "#add", function() {
   count++;
   $('#task').append(list);
   $('.taskItem').draggable({
-    //  accept: '.taskItem',
     activeclass: 'dropactive',
     tolerance: 'intersect',
     hoverClass: 'drophover',
+    revert:'invalid',
     opacity: 1
   });
-
-  console.log(count);
 });
 $(document).on("click", ".remove", function() {
   console.log('removed');
