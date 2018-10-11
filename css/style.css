@@ -1,0 +1,34 @@
+.taskBox{
+  display: inline-block;
+   border: solid 1px #ddd;
+   width: 300px;
+   height: inherit;
+    background: midnightblue;
+    float:left;
+    margin: 3em;
+    padding: 3em;
+  }
+.drophover {
+  background: #eee;
+}
+#drag {
+   width: 70px;
+   height: 70px;
+    background: #ffeeee;
+   }
+.taskItem{
+  margin: auto;
+  padding: 30px;
+}
+li{
+    position:relative;
+    height: 40px;
+}
+.remove{
+    position:absolute;
+    margin: 10px;
+    padding: 3px;
+    right:20px;
+    height: 25px;
+    top:-3px;
+}

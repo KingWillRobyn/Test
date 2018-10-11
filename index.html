@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Curia Regis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+
+  <!-- drag from one boe to the other-->
+  <div class="taskBox">
+    <div>
+      <h5><strong>Draggable Box</strong></h5>
+      <div id="progress">
+        <!--Include a header DIV with the same name as the draggable DIV, followed by "header"-->
+        <div id="move">
+          
+          <div id=addB>
+            <button class="btn btn-primary" id="add">Add</button>
+          </div>
+          <ul class="list-group" id="task">
+            <li class="list-group-item taskItem">Task#1 <button type="button" class="btn btn-danger btn-sm remove" >
+                <span class="glyphicon glyphicon-remove"></span> Remove</button></li>
+            <li class="list-group-item taskItem">Task# 2<button type="button" class="btn btn-danger btn-sm remove" >
+                <span class="glyphicon glyphicon-remove"></span> Remove</button></li>
+            <li class="list-group-item taskItem">Task#3 <button type="button" class="btn btn-danger btn-sm remove" >
+                <span class="glyphicon glyphicon-remove"></span> Remove</button></li>
+            <li class="list-group-item taskItem">Task# <button type="button" class="btn btn-danger btn-sm remove" >
+              <span class="glyphicon glyphicon-remove"></span>Remove</button> </li>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!--Populate 10 array boxes into box-->
+  <div class="taskBox" id="completed" >
+    <h5><strong>Completed Task</strong></h5>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
