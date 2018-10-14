@@ -2,33 +2,44 @@
   display: inline-block;
    border: solid 1px #ddd;
    width: 300px;
-   height: inherit;
+   height: 300px;
     background: midnightblue;
     float:left;
-    margin: 3em;
-    padding: 3em;
+    margin: 30px;
+    padding: 30px;
+    /* color: red; */
   }
-.drophover {
-  background: #eee;
+
+.dropdown, .select{
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
 }
-#drag {
-   width: 70px;
-   height: 70px;
-    background: #ffeeee;
-   }
-.taskItem{
-  margin: auto;
-  padding: 25px;
+.top{
+margin: 10 auto;
 }
-li{
-    position:relative;
-    height: 40px;
+#datepicker{
+  width:180px;
+ margin: 0 20px 20px 20px;
 }
-.remove{
-    position:absolute;
-    margin: 10px;
-    padding: 3px;
-    right:20px;
-    height: 25px;
-    top:-3px;
+#datepicker > span:hover
+{
+  cursor: pointer;
+}
+#priority {
+  width: 30%;
+}
+
+img{
+  padding-right:3px;
+   padding-top: 3px;
+   display:block;
+   width: 20px;
+   height: 20px;
+}
+#datepicker{
+  left:-35px;
+}
+#pr{
+  right:-15px;
 }

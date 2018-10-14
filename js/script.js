@@ -1,43 +1,54 @@
 $(document).ready(function() {
-  $('#completed').droppable({
-    append: ".taskItem",
-    tolerance: "fit",
-    revert:"invalid",
-    drop: function(event, ui) {
-      var $item = ui.draggable;
-      $item.fadeOut(function() {
-        $item.css({
-          "left": "",
-          "top": "",
-          "bottom": "10px",
-          "right": "",
-          "margin": "10px",
-          "padding": "10px"
-        }).fadeIn();
-      });
-      $item.appendTo(this);
-      ui.draggable.draggable({disabled: true});
-    },
-  });
 
-});
-var count = 1;
 
-$(document).on("click", "#add", function() {
-  console.log('clicked');
-  var list = '<li class="list-group-item taskItem">' + 'Task# ' + count + '<button type="button" class="btn btn-danger btn-sm remove" >' +
-    '<span class="glyphicon glyphicon-remove"></span>' + 'Remove' + '</button>' + '</li>';
-  count++;
-  $('#task').append(list);
-  $('.taskItem').draggable({
-    activeclass: 'dropactive',
-    tolerance: 'intersect',
-    hoverClass: 'drophover',
-    revert:'invalid',
-    opacity: 1
-  });
-});
-$(document).on("click", ".remove", function() {
-  console.log('removed');
-  $(this).closest("li").remove();
+  //Use the id of the form instead of #change
+  $('#selectType').change(function() {
+    //this is just getting the value that is selected
+    var title = $(this).val();
+    $('.modal-title').html(title);
+    $('.modal').modal('show');
+    $('.lime').hide();
+    $(".amber").hide();
+    $('.orange').show();
+
+    $('#priority').click(function() {
+      var priority = $(this).val();
+      switch (priority) {
+        case 'hi':
+          $('.orange').show();
+          $('.lime').hide();
+          $(".amber").hide();
+          break;
+        case 'med':
+          $('.amber').show();
+          $('.lime').hide();
+          $('.orange').hide();
+          break;
+        case 'low':
+          $('.lime').show();
+          $(".amber").hide();
+          $('.orange').hide();
+          break;
+      }
+    })
+    $(function() {
+      $("#datepicker").datepicker({
+        format: "mm-dd-yyyy",
+        autoclose: true,
+        todayHighlight: true,
+        startDate: '0'
+      }).datepicker('update', new Date());
+    });
+
+
+//     $('form').submit(function(){
+//       var fields = $(":input").serializeArray(event);
+//       event.preventDefault();
+//     var form = $('form').serializeArray();
+// $('#results').append(form);
+//
+//     });
+
+    })
+
 });
